@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="{% static '/CSS/style.css' %}"> -->
+</head>
+<style>
+
+    body{
+       
+       
+        /* background-image: url('/base/static/base/1.jpg');
+        background-position: center; */
+        font-family: 'Nunito', sans-serif;
+        padding-top: 50px;
+
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        font-family: 'Ubuntu', sans-serif;
+    }
+    a,
+    p{
+        color: #4b5156;
+    }
+
+    .container{
+        max-width: 550px;
+        margin: auto;
+        background-color: #fff;
+        -webkit-box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+        box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+    }
+    .header-bar{
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+        background: linear-gradient(to right, #ffafbd, #ffc3a0);
+        box-shadow: 0 0 20px 1px #4b5156;
+        
+    }
+    .header-bar a{
+        color: rgb(247, 247, 247);
+        text-decoration: none;
+    }
+    .task-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #fff;
+        border-top: 1px solid rgb(226, 226, 226);
+    }
+    .task-title{
+        display: flex;
+    }
+    .task-title a{
+        text-decoration: none;
+        color: #4b5156;
+        margin-left: 10px;
+    }
+    .task-compelete-icon{
+        height: 20px;
+        width: 20px;
+        background-color: rgb(105, 192, 105);
+        border-radius: 50%;
+    }
+    .task-incompelete-icon{
+        height: 20px;
+        width: 20px;
+        background-color: rgb(218, 218, 218);
+        border-radius: 50%;
+    }
+    .delete-link{
+        text-decoration: none;
+        font-weight: 900;
+        color:  linear-gradient(to right, #ffafbd, #ffc3a0);
+        font-size: 22px;
+        line-height: 0;
+    }
+    .delete-link:hover{
+        color: red;
+    }
+    #search-add-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    #add-link{
+        color:  linear-gradient(to right, #9c27b0, #e040fb);;
+        text-decoration: none;
+        font-size: 42px;
+        text-shadow: 1px 1px #4b5156;
+    }
+    #add-link:hover{
+        color: rgb(0, 168, 0);
+    }
+    input[type=text],
+    input[type=password],
+    textarea{
+        border: 1px solid #4b5156;;
+        border-radius: 5px;
+        margin-right: 0.5em;
+        padding: 10px;
+        width: 90%;
+        
+    }
+    label{
+        padding-top: 10px !important;
+        display: block;
+    }
+    /* .button{
+        border: 1px solid #eb796f;
+        background-color: #fafafa;
+        color: #eb796f;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    } */
+    .button{
+        cursor: pointer;
+        border-radius: 5px;
+        color: #fff;
+        background: linear-gradient(to right, #ffafbd, #ffc3a0);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Nunito', sans-serif;
+        /* margin-left: 10em; */
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px #4b5156;
+        
+
+    }
+    .back:hover{
+        color: #4b5156;;
+    }
+    .button:hover{
+        background: #4b5156;
+    }
+    .card-body{
+        padding: 20px;
+    }
+    .register{
+        background: linear-gradient(to right, #ffafbd, #ffc3a0);
+        color: #fff;
+        border-radius: 5px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-decoration: none;
+        box-shadow: 0 0 20px 1px #4b5156;
+    }
+    .register:hover{
+        background: #4b5156;
+    }
+    .login{
+        background: linear-gradient(to right, #ffafbd , #ffc3a0);
+        color: #fff;
+        border-radius: 5px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-decoration: none;
+        box-shadow: 0 0 20px 1px #4b5156;
+    }  
+    .login:hover{
+        background: #4b5156;
+    }
+    .logout:hover{
+        color: #4b5156;
+    }
+</style> 
+<body>
+    <div class="container">
+        {% block content %}
+        <img src="{% static 'images/1.jpg' %}" alt="background iamge">
+
+        {% endblock content %}
+    </div>
+</body>
+</html>
