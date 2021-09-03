@@ -123,6 +123,4 @@ LOGIN_URL = 'login'
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
-STATICFILES_DIRS = [
-   "C:/Users/HP/src/base/static"
-]
+
